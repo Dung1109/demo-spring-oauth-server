@@ -1,0 +1,16 @@
+# curl -X POST http://localhost:8080/oauth2/token?client_id=client&redirect_uri=https://www.manning.com/authorized&grant_type=authorization_code&code=ao2oz47zdM0D5gbAqtZVB…code_verifier=Mxk_tq3oZn-P-xG96Rw_mnJtqpszSj9OOt_NF9sN0fY --header 'Authorization: Basic Y2xpZW50OnNlY3JldA==
+POST http://localhost:8080/oauth2/token?client_id=client&redirect_uri=https://www.google.com&grant_type=authorization_code&code=cetiq9sg0wsNd3t8jW6hZU0h0YSVVoGI738d0c19kwzCAq4lP5ADOW5l9NnAHP879YZjKIAxNyf3GldMZWjhl4W1FZLXi1dNQoWuZ1qYU2szm8GJQmV-yEUevs_OlgxX&code_verifier=Mxk_tq3oZn-P-xG96Rw_mnJtqpszSj9OOt_NF9sN0fY
+Authorization: Basic Y2xpZW50OnNlY3JldA==
+
+# curl -u "bill:password" http://localhost:8080/oauth2/authorize?response_type=code&client_id=client&scope=openid&redirect_uri=https://www.manning.com/authorized&code_challenge=QYPAZ5NU8yvtlQ9erXrUYR-T5AGCjCF47vN-KsaI2A8&code_challenge_method=S256
+GET http://localhost:8080/oauth2/authorize?response_type=code&client_id=client&scope=openid&redirect_uri=https://www.google.com&code_challenge=QYPAZ5NU8yvtlQ9erXrUYR-T5AGCjCF47vN-KsaI2A8&code_challenge_method=S256
+Authorization: Basic bill password
+
+###
+
+### GET request to example server
+GET http://localhost:8080/.well-known/openid-configuration
+
+###
+GET http://localhost:8080/oauth2/jwks
+
